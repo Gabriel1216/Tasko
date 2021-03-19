@@ -1,5 +1,6 @@
+;
 //Asignar un nombre y versión al cache
-const Cache_Name = 'v1_cache_tasko',
+const CACHE_NAME = 'v1_cache_tasko',
     urlsToCache = [
         './',
         './css/all.min.css',
@@ -14,7 +15,7 @@ const Cache_Name = 'v1_cache_tasko',
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(Cache_Name)
+    caches.open(CACHE_NAME)
       .then(cache => {
         return cache.addAll(urlsToCache)
           .then(() => self.skipWaiting())
@@ -25,7 +26,7 @@ self.addEventListener('install', e => {
 
 //una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
 self.addEventListener('activate', e => {
-  const cacheWhitelist = [Cache_Name]
+  const cacheWhitelist = [CACHE_NAME]
 
   e.waitUntil(
     caches.keys()
@@ -58,3 +59,4 @@ self.addEventListener('fetch', e => {
         return fetch(e.request)
       })
   )
+})
