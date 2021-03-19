@@ -1,16 +1,17 @@
-;
-//Asignar un nombre y versión al cache
-const CACHE_NAME = 'v1_cache_tasko',
-    urlsToCache = [
-        './',
-        './css/all.min.css',
-        './css/bootstrap.min.css',
-        './css/main.css',
-        './js/bootstrap.bundle.min.js',
-        './js/bootstrap.min.js',
-        './js/jquery.js',
-        './js/tareas2.0.js',
-    ];
+//asignar un nombre y versión al cache
+const CACHE_NAME = 'v2_cache_tasko',
+  urlsToCache = [
+    './',
+    './index.html',
+    './css/all.min.css',
+    './css/bootstrap.min.css',
+    './css/main.css',
+    './js/bootstrap.bundle.min.js',
+    './js/bootstrap.min.js',
+    './js/jquery.js',
+    './js/tareas2.0.js',
+    './webfonts',
+  ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
 self.addEventListener('install', e => {
