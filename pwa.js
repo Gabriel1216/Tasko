@@ -10,6 +10,10 @@ const CACHE_NAME = 'v1_cache_tasko',
     './js/bootstrap.min.js',
     './js/jquery.js',
     './js/tareas2.0.js',
+    './webfonts/fa-solid-900.woff2',
+    './webfonts/fa-solid-900.woff',
+    './webfonts/fa-solid-900.ttf',
+    './img/icono.png',
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
